@@ -13,3 +13,5 @@ https://tecoble.techcourse.co.kr/post/2021-07-25-resttemplate-webclient/
 https://www.baeldung.com/spring-webclient-simultaneous-calls
 https://www.baeldung.com/spring-webflux-concurrency
 
+### Mono와 Flux
+https://www.baeldung.com/spring-webclient-json-list
