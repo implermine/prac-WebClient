@@ -15,3 +15,13 @@ https://www.baeldung.com/spring-webflux-concurrency
 
 ### Mono와 Flux
 https://www.baeldung.com/spring-webclient-json-list
+
+
+---
+
+# 작업로그
+
+
+2022-08-22 Using Map to Represent Temporary Response Dto
+
+---
