@@ -24,13 +24,16 @@ import java.util.concurrent.atomic.AtomicReference;
 @Slf4j
 public class MainTest {
 
-    private  RestTemplateBuilder restTemplateBuilder;
+    private final RestTemplate restTemplate;
     private final WebClient webClient;
 
-    public MainTest(@Autowired RestTemplateBuilder restTemplateBuilder, @LocalServerPort int randomServerPort) {
-        this.restTemplateBuilder = restTemplateBuilder;
-        this.webClient = WebClient.builder().baseUrl("http://localhost:" + randomServerPort + "/delay/").build();
-        this.randomServerPort = randomServerPort;
+    @LocalServerPort
+    private int localServerPort;
+
+    @Autowired
+    public MainTest(RestTemplateBuilder restTemplateBuilder, WebClient.Builder webClientBuilder) {
+        this.restTemplate = restTemplateBuilder.build();
+        this.webClient = webClientBuilder.baseUrl("http://localhost:" + randomServerPort + "/delay").build();
     }
 
     private int randomServerPort;
@@ -43,7 +46,6 @@ public class MainTest {
     @Test
     @DisplayName("restTemplate을 이용한 blocking 테스트")
     public void blockingTest(){
-        RestTemplate restTemplate = restTemplateBuilder.build();
 
         log.info("Starting blockingTest...");
         log.info("Call api...");

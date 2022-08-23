@@ -1,6 +1,7 @@
 # README
 
 WebClient의 non-blocking 처리에 대해 알아봅니다.
+Reactor 공부도 여기서 같이 진행합니다.
 
 ---
 
@@ -23,5 +24,6 @@ https://www.baeldung.com/spring-webclient-json-list
 
 
 2022-08-22 Using Map to Represent Temporary Response Dto
+2022-08-23 Reactor:MONO & FLUX Study For Async
 
 ---
